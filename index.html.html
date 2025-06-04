@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="บริษัท IoT นำเสนอเทคโนโลยีอัจฉริยะสำหรับอนาคต" />
+  <meta name="keywords" content="IoT, Dashboard, Sensor, Cloud API, Automation" />
+  <meta name="author" content="IoT Company" />
+  <title>IoT Company</title>
+  <link rel="icon" href="src/logo.png" type="image/png" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fade-in-up {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in-up {
+      animation: fade-in-up 1s ease-out forwards;
+    }
+
+    .delay-200 {
+      animation-delay: 0.2s;
+    }
+
+    .delay-400 {
+      animation-delay: 0.4s;
+    }
+
+    .animate-pulse-slow {
+      animation: pulse 6s infinite;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800 transition-colors">
+
+  <header class="sticky top-0 bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <img src="src/logo.png" alt="Logo" class="h-20 w-20">
+      </div>
+      <nav class="space-x-4 hidden md:block">
+        <a href="#services" class="hover:text-orange-500">บริการ</a>
+        <a href="#about" class="hover:text-orange-500">เกี่ยวกับเรา</a>
+        <a href="#contact" class="hover:text-orange-500">ติดต่อ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section with Animation -->
+  <section class="bg-gradient-to-r from-[#00A9E0] to-[#007BFF] text-white py-20 text-center relative overflow-hidden">
+    <div class="relative z-10">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-up">พลังแห่ง IoT เพื่อธุรกิจของคุณ</h1>
+      <p class="mb-6 animate-fade-in-up delay-200">เรานำเสนอโซลูชันอัจฉริยะเพื่อโลกที่เชื่อมต่อ</p>
+      <a href="#services"
+        class="bg-orange-500 px-6 py-3 rounded-full text-white font-semibold hover:bg-orange-600 animate-fade-in-up delay-400">ดูบริการของเรา</a>
+    </div>
+    <div
+      class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent animate-pulse-slow">
+    </div>
+  </section>
+
+  <section id="services" class="py-16 max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-8">บริการของเรา</h2>
+    <p class="mb-12 text-gray-600">เรานำเสนอบริการด้าน IoT ครบวงจร ตั้งแต่การติดตั้งฮาร์ดแวร์
+      ไปจนถึงการวิเคราะห์ข้อมูลผ่านแดชบอร์ด พร้อมรองรับการเชื่อมต่อกับระบบภายนอก</p>
+    <div class="grid gap-8 md:grid-cols-3">
+      <div class="p-6 border rounded-lg shadow bg-white">
+        <img src="src/i1.png" alt="Sensor Icon" class="h-20 w-20 mb-4 mx-auto">
+        <h3 class="text-xl font-semibold mb-2">ระบบเซ็นเซอร์ IoT</h3>
+        <p class="text-gray-600">ติดตั้งและเชื่อมต่อเซ็นเซอร์ตรวจจับข้อมูล เช่น อุณหภูมิ ความชื้น การสั่นสะเทือน
+          เพื่อเก็บข้อมูลแบบเรียลไทม์</p>
+      </div>
+      <div class="p-6 border rounded-lg shadow bg-white">
+        <img src="src/i2.png" alt="Dashboard Icon" class="h-20 w-20 mb-4 mx-auto">
+        <h3 class="text-xl font-semibold mb-2">Dashboard แสดงผล</h3>
+        <p class="text-gray-600">ออกแบบแดชบอร์ดแบบอินเทอร์แอคทีฟ ดูข้อมูลแบบเรียลไทม์ วิเคราะห์แนวโน้ม
+          และแจ้งเตือนเมื่อมีเหตุผิดปกติ</p>
+      </div>
+      <div class="p-6 border rounded-lg shadow bg-white">
+        <img src="src/i3.png" alt="API Icon" class="h-20 w-20 mb-4 mx-auto">
+        <h3 class="text-xl font-semibold mb-2">เชื่อมต่อ Cloud API</h3>
+        <p class="text-gray-600">ระบบสามารถเชื่อมต่อกับบริการภายนอก เช่น LINE, Telegram, Google Sheet, ERP ได้ผ่าน API
+          ที่กำหนดเอง</p>
+      </div>
+    </div>
+  </section>
+  <!-- Projects pack-->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-10">แพ็กเกจระบบและราคา</h2>
+      <div class="grid gap-6 md:grid-cols-3 text-left">
+        <div class="bg-gray-100 p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold mb-2">Starter Package</h3>
+          <p class="mb-4">ระบบพื้นฐานสำหรับบ้านและสำนักงานขนาดเล็ก</p>
+          <ul class="list-disc list-inside mb-4">
+            <li>Sensor 3 จุด</li>
+            <li>Dashboard ดูข้อมูล</li>
+            <li>แจ้งเตือนผ่าน LINE</li>
+          </ul>
+          <p class="text-2xl font-bold text-blue-600">฿4,900</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold mb-2">Business Package</h3>
+          <p class="mb-4">เหมาะสำหรับโรงงานหรือองค์กรขนาดกลาง</p>
+          <ul class="list-disc list-inside mb-4">
+            <li>Sensor 10 จุด</li>
+            <li>ระบบ Dashboard + วิเคราะห์</li>
+            <li>API เชื่อมต่อภายนอก</li>
+          </ul>
+          <p class="text-2xl font-bold text-blue-600">฿14,900</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold mb-2">Enterprise Package</h3>
+          <p class="mb-4">ระบบขนาดใหญ่ที่ปรับแต่งได้ตามความต้องการ</p>
+          <ul class="list-disc list-inside mb-4">
+            <li>Sensor 20 จุดขึ้นไป</li>
+            <li>Dashboard ขั้นสูง + แจ้งเตือนหลายช่องทาง</li>
+            <li>บริการดูแลระบบ 24/7</li>
+          </ul>
+          <p class="text-2xl font-bold text-blue-600">เริ่มต้น ฿29,900</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Benefit Section -->
+  <section class="py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-10">ประโยชน์จากการติดตั้งระบบ IoT</h2>
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">ประหยัดต้นทุน</h3>
+          <p>ลดค่าใช้จ่ายด้วยระบบอัตโนมัติและการตรวจสอบเรียลไทม์</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">เพิ่มประสิทธิภาพ</h3>
+          <p>ติดตามและวิเคราะห์ข้อมูลจากอุปกรณ์เพื่อปรับปรุงการทำงาน</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">แจ้งเตือนอัตโนมัติ</h3>
+          <p>ระบบสามารถแจ้งเตือนเมื่อเกิดปัญหาหรือเหตุการณ์ผิดปกติ</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- IoT Dummy Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-10">IoT Monitoring</h2>
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="bg-gray-100 p-6 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">อุณหภูมิ</h3>
+          <p class="text-4xl font-bold text-blue-600" id="temp">--°C</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">ความชื้น</h3>
+          <p class="text-4xl font-bold text-blue-600" id="humidity">--%</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">สถานะไฟ</h3>
+          <p class="text-4xl font-bold text-green-500" id="light-status">--</p>
+        </div>
+      </div>
+      <div class="mt-10">
+        <a href="https://ss1.surfsight.co/" target="_blank"
+          class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700">ไปยังเว็บไซต์ตัวอย่าง</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function randomIoTData() {
+      document.getElementById("temp").innerText = `${Math.floor(Math.random() * 10) + 25}°C`;
+      document.getElementById("humidity").innerText = `${Math.floor(Math.random() * 20) + 50}%`;
+      document.getElementById("light-status").innerText = Math.random() > 0.5 ? "เปิด" : "ปิด";
+    }
+    setInterval(randomIoTData, 3000);
+    window.onload = randomIoTData;
+  </script>
+
+  <!-- Partners Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-10">พันธมิตรของเรา</h2>
+      <div class="flex justify-center gap-10 flex-wrap">
+        <img src="src/alpng.png" alt="Partner 1" class="h-16 object-contain">
+        <img src="src/BIM.png" alt="Partner 2" class="h-16 object-contain">
+      </div>
+    </div>
+  </section>
+
+  <!-- Customers Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-10">ลูกค้าของเรา</h2>
+      <div class="flex justify-center gap-10 flex-wrap">
+        <img src="src/logo_smart.png" alt="Customer 1" class="h-20 object-contain bg-gray-600">
+        <img src="src/PFS.png" alt="Customer 2" class="h-20 object-contain">
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Showcase Section -->
+  <section class="py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-10">ผลงานของเรา</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-4 rounded shadow">
+          <img src="src/profile/p5.jpg" class="mb-2" alt="project 1">
+          <p>Smart Farm ระบบควบคุมแสงและน้ำอัตโนมัติ</p>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+          <img src="src/profile/p2.jpg" class="mb-2" alt="project 2">
+          <p>ระบบตรวจวัดพลังงานในโรงงาน</p>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+          <img src="src/profile/p3.jpg" class="mb-2" alt="project 3">
+          <p>บ้านอัจฉริยะพร้อมควบคุมผ่านมือถือ</p>
+        </div>
+      </div>
+    </div>
+
+    <section id="contact" class="py-16 max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">ติดต่อเรา</h2>
+      <div class="mb-6 text-center">
+        <p>116/8 Moo5 BANG PHAI Sub-district, MUEANG NONTHABURI District, NONTHABURI Province 11000</p>
+        <p>โทร: 097-2899851 | อีเมล: contact@surfsight.co</p>
+      </div>
+    </section>
+
+    <footer class="bg-gray-200 text-center py-4">
+      <p>&copy; 2025 IoT Company. สงวนลิขสิทธิ์</p>
+    </footer>
+
+</body>
+
+</html>
