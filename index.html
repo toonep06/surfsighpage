@@ -13,33 +13,57 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    @keyframes fade-in-up {
+    @keyframes fadeInBg {
       0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: scale(1.05);
       }
 
       100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: scale(1);
       }
     }
 
+    .animate-fade-in-bg {
+      animation: fadeInBg 2.5s ease-out forwards;
+    }
+
+    @keyframes slide-in {
+      0% {
+        opacity: 0;
+        transform: translateY(-40px) scale(0.95);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .animate-slide-in {
+      animation: slide-in 1s ease-out both;
+    }
+
     .animate-fade-in-up {
-      animation: fade-in-up 1s ease-out forwards;
+      animation: fade-in-up 1s ease-out both;
     }
 
-    .delay-200 {
-      animation-delay: 0.2s;
+    .text-glow {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
     }
+      @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 
-    .delay-400 {
-      animation-delay: 0.4s;
-    }
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out both;
+  }
 
-    .animate-pulse-slow {
-      animation: pulse 6s infinite;
-    }
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
   </style>
 </head>
 
@@ -59,17 +83,31 @@
   </header>
 
   <!-- Hero Section with Animation -->
-  <section class="bg-gradient-to-r from-[#00A9E0] to-[#007BFF] text-white py-20 text-center relative overflow-hidden">
-    <div class="relative z-10">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-up">พลังแห่ง IoT เพื่อธุรกิจของคุณ</h1>
-      <p class="mb-6 animate-fade-in-up delay-200">เรานำเสนอโซลูชันอัจฉริยะเพื่อโลกที่เชื่อมต่อ</p>
-      <a href="#services"
-        class="bg-orange-500 px-6 py-3 rounded-full text-white font-semibold hover:bg-orange-600 animate-fade-in-up delay-400">ดูบริการของเรา</a>
+  <section class="relative text-white py-24 text-center overflow-hidden">
+    <!-- รูปพื้นหลังแบบครอบเต็ม + เฟด -->
+    <div class="absolute inset-0">
+      <img src="src/profile/p4.jpg" alt="IoT Background" class="w-full h-full object-cover opacity-0 animate-fade-in-bg" />
+      <!-- Overlay สีเพื่อให้ข้อความเด่น -->
+      <div class="absolute inset-0 bg-gradient-to-r from-[#00A9E0]/80 to-[#007BFF]/80 mix-blend-multiply"></div>
     </div>
-    <div
-      class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent animate-pulse-slow">
+
+    <!-- เนื้อหา -->
+    <div class="relative z-10 px-4">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4 animate-slide-in text-glow">
+        พลังแห่ง <span class="text-yellow-300">IoT</span> เพื่อธุรกิจของคุณ
+      </h1>
+      <p class="mb-8 text-lg md:text-xl animate-fade-in-up delay-300">
+        เชื่อมต่อโลกอัจฉริยะ สู่การทำงานที่คล่องตัวและปลอดภัยยิ่งขึ้น
+      </p>
+      <a href="#services"
+        class="inline-block bg-orange-500 px-8 py-3 rounded-full text-white font-semibold shadow-lg hover:bg-orange-600 hover:scale-105 transition transform duration-300 animate-fade-in-up delay-500">
+        ดูบริการของเรา
+      </a>
     </div>
   </section>
+
+
+
 
   <section id="services" class="py-16 max-w-6xl mx-auto px-4 text-center">
     <h2 class="text-3xl font-bold mb-8">บริการของเรา</h2>
@@ -96,44 +134,168 @@
       </div>
     </div>
   </section>
-  <!-- Projects pack-->
   <section class="py-16 bg-white">
     <div class="max-w-6xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-10">แพ็กเกจระบบและราคา</h2>
-      <div class="grid gap-6 md:grid-cols-3 text-left">
-        <div class="bg-gray-100 p-6 rounded-lg shadow">
-          <h3 class="text-xl font-bold mb-2">Starter Package</h3>
-          <p class="mb-4">ระบบพื้นฐานสำหรับบ้านและสำนักงานขนาดเล็ก</p>
-          <ul class="list-disc list-inside mb-4">
-            <li>Sensor 3 จุด</li>
-            <li>Dashboard ดูข้อมูล</li>
-            <li>แจ้งเตือนผ่าน LINE</li>
-          </ul>
-          <p class="text-2xl font-bold text-blue-600">฿4,900</p>
+      <h2 class="text-3xl font-bold mb-10 animate-fade-in-up">จุดเด่นของระบบ</h2>
+      <div class="grid gap-6 md:grid-cols-3">
+
+        <!-- Box 1 -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow animate-fade-in-up delay-200">
+          <div class="mb-4">
+            <!-- Chip Icon -->
+            <svg class="w-12 h-12 mx-auto text-blue-500" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M13 16h-1v-4h-1m-1-4h4a2 2 0 012 2v8a2 2 0 01-2 2h-4a2 2 0 01-2-2V6a2 2 0 012-2h4" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">รองรับโปรโตคอลหลากหลาย</h3>
+          <p>เช่น Modbus, MQTT, OPC-UA, HTTP, CoAP รองรับทั้งอุปกรณ์รุ่นเก่าและใหม่</p>
         </div>
-        <div class="bg-gray-100 p-6 rounded-lg shadow">
-          <h3 class="text-xl font-bold mb-2">Business Package</h3>
-          <p class="mb-4">เหมาะสำหรับโรงงานหรือองค์กรขนาดกลาง</p>
-          <ul class="list-disc list-inside mb-4">
-            <li>Sensor 10 จุด</li>
-            <li>ระบบ Dashboard + วิเคราะห์</li>
-            <li>API เชื่อมต่อภายนอก</li>
-          </ul>
-          <p class="text-2xl font-bold text-blue-600">฿14,900</p>
+
+        <!-- Box 2 -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow animate-fade-in-up delay-400">
+          <div class="mb-4">
+            <!-- Cog Icon -->
+            <svg class="w-12 h-12 mx-auto text-orange-500" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0a1.72 1.72 0 002.376 1.066 1.72 1.72 0 012.356 2.356 1.72 1.72 0 001.066 2.376c.921.3.921 1.603 0 1.902a1.72 1.72 0 00-1.066 2.376 1.72 1.72 0 01-2.356 2.356 1.72 1.72 0 00-2.376 1.066c-.3.921-1.603.921-1.902 0a1.72 1.72 0 00-2.376-1.066 1.72 1.72 0 01-2.356-2.356 1.72 1.72 0 00-1.066-2.376c-.921-.3-.921-1.603 0-1.902a1.72 1.72 0 001.066-2.376 1.72 1.72 0 012.356-2.356 1.72 1.72 0 002.376-1.066z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">ปรับแต่งได้ตามความต้องการ</h3>
+          <p>สามารถออกแบบให้เหมาะสมกับธุรกิจแต่ละประเภท ทั้งภาคเกษตร อุตสาหกรรม และบริการ</p>
         </div>
-        <div class="bg-gray-100 p-6 rounded-lg shadow">
-          <h3 class="text-xl font-bold mb-2">Enterprise Package</h3>
-          <p class="mb-4">ระบบขนาดใหญ่ที่ปรับแต่งได้ตามความต้องการ</p>
-          <ul class="list-disc list-inside mb-4">
-            <li>Sensor 20 จุดขึ้นไป</li>
-            <li>Dashboard ขั้นสูง + แจ้งเตือนหลายช่องทาง</li>
-            <li>บริการดูแลระบบ 24/7</li>
-          </ul>
-          <p class="text-2xl font-bold text-blue-600">เริ่มต้น ฿29,900</p>
+
+        <!-- Box 3 -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow animate-fade-in-up delay-600">
+          <div class="mb-4">
+            <!-- Shield Check Icon -->
+            <svg class="w-12 h-12 mx-auto text-green-500" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12l2 2 4-4m3 2a9 9 0 11-6-8.485V3.5a9 9 0 016 8.5z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">ปลอดภัยและเสถียร</h3>
+          <p>มีระบบป้องกันข้อมูลรั่วไหล พร้อมการเข้ารหัสและควบคุมสิทธิ์การเข้าถึง</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<section class="py-16 bg-gradient-to-r from-[#E0F7FF] via-white to-[#E0F7FF] text-center">
+  <h2 class="text-3xl font-bold mb-10 text-[#007BFF]">ก่อนและหลังใช้ระบบ IoT</h2>
+
+  <div class="flex flex-col md:flex-row items-center justify-center gap-6 px-4">
+    <!-- ก่อนมี IoT -->
+    <div class="w-full md:w-1/2 bg-white/80 p-4 rounded-lg shadow-md animate-fade-in border border-gray-200">
+      <img src="src/bf.png"
+           alt="ก่อนมี IoT"
+           class="rounded-md mb-3 max-h-64 mx-auto object-cover" />
+      <p class="text-red-600 font-medium">ก่อนมีระบบ IoT: ตรวจเช็คด้วยมือ ความผิดพลาดสูง</p>
+    </div>
+
+    <!-- หลังมี IoT -->
+    <div class="w-full md:w-1/2 bg-white/80 p-4 rounded-lg shadow-md animate-fade-in delay-300 border border-gray-200">
+      <img src="src/af.png"
+           alt="หลังมี IoT"
+           class="rounded-md mb-3 max-h-64 mx-auto object-cover" />
+      <p class="text-green-600 font-medium">หลังมีระบบ IoT: ตรวจวัดเรียลไทม์ ควบคุมแม่นยำ</p>
+    </div>
+  </div>
+</section>
+
+
+
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-10 animate-fade-in-up">แพ็กเกจระบบและราคา</h2>
+
+      <!-- Tab Buttons -->
+      <div class="flex justify-center mb-8">
+        <button onclick="showTab('onprem')"
+          class="tab-btn bg-blue-500 text-white px-6 py-2 rounded-l-lg font-semibold hover:bg-blue-600">On-Premise</button>
+        <button onclick="showTab('oncloud')"
+          class="tab-btn bg-gray-200 text-gray-800 px-6 py-2 rounded-r-lg font-semibold hover:bg-blue-200">On-Cloud</button>
+      </div>
+
+      <!-- On-Premise Tab -->
+      <div id="tab-onprem" class="tab-content animate-fade-in-up">
+        <div class="grid gap-6 md:grid-cols-3 text-left">
+          <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-bold mb-2 text-gradient">Starter Package</h3>
+            <p class="mb-4">ระบบพื้นฐานสำหรับบ้านและสำนักงานขนาดเล็ก</p>
+            <ul class="list-disc list-inside mb-4">
+              <li>Sensor 3 จุด</li>
+              <li>Dashboard ดูข้อมูล</li>
+              <li>แจ้งเตือนผ่าน LINE</li>
+            </ul>
+            <p class="text-2xl font-bold text-blue-600">฿4,900</p>
+          </div>
+          <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-bold mb-2 text-gradient">Business Package</h3>
+            <p class="mb-4">เหมาะสำหรับโรงงานหรือองค์กรขนาดกลาง</p>
+            <ul class="list-disc list-inside mb-4">
+              <li>Sensor 10 จุด</li>
+              <li>ระบบ Dashboard + วิเคราะห์</li>
+              <li>API เชื่อมต่อภายนอก</li>
+            </ul>
+            <p class="text-2xl font-bold text-blue-600">฿14,900</p>
+          </div>
+          <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-bold mb-2 text-gradient">Enterprise Package</h3>
+            <p class="mb-4">ระบบขนาดใหญ่ที่ปรับแต่งได้ตามความต้องการ</p>
+            <ul class="list-disc list-inside mb-4">
+              <li>Sensor 20 จุดขึ้นไป</li>
+              <li>Dashboard ขั้นสูง + แจ้งเตือนหลายช่องทาง</li>
+              <li>บริการดูแลระบบ 24/7</li>
+            </ul>
+            <p class="text-2xl font-bold text-blue-600">เริ่มต้น ฿29,900</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- On-Cloud Tab -->
+      <div id="tab-oncloud" class="tab-content hidden animate-fade-in-up">
+        <div class="grid gap-6 md:grid-cols-3 text-left">
+          <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-bold mb-2 text-gradient">Cloud Basic</h3>
+            <p class="mb-4">ระบบ IoT บนคลาวด์ เริ่มต้นใช้งานง่าย</p>
+            <ul class="list-disc list-inside mb-4">
+              <li>Dashboard บนเว็บ</li>
+              <li>แจ้งเตือนผ่าน LINE / Telegram</li>
+              <li>เก็บข้อมูล 3 เดือน</li>
+            </ul>
+            <p class="text-2xl font-bold text-blue-600">฿1,900/เดือน</p>
+          </div>
+          <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-bold mb-2 text-gradient">Cloud Pro</h3>
+            <p class="mb-4">สำหรับการใช้งานในองค์กร</p>
+            <ul class="list-disc list-inside mb-4">
+              <li>วิเคราะห์ข้อมูลเชิงลึก</li>
+              <li>API เชื่อมต่อ ERP</li>
+              <li>เก็บข้อมูล 12 เดือน</li>
+            </ul>
+            <p class="text-2xl font-bold text-blue-600">฿4,900/เดือน</p>
+          </div>
+          <div class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+            <h3 class="text-xl font-bold mb-2 text-gradient">Cloud Enterprise</h3>
+            <p class="mb-4">รองรับการเชื่อมต่ออุปกรณ์หลายพันชิ้น</p>
+            <ul class="list-disc list-inside mb-4">
+              <li>Custom Dashboard</li>
+              <li>Storage 3 ปี + Backup</li>
+              <li>บริการ SLA ระดับองค์กร</li>
+            </ul>
+            <p class="text-2xl font-bold text-blue-600">เริ่มต้น ฿9,900/เดือน</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
   <!-- Benefit Section -->
   <section class="py-16 bg-gray-100">
     <div class="max-w-6xl mx-auto px-4 text-center">
@@ -246,5 +408,60 @@
     </footer>
 
 </body>
+<style>
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.7s ease-out both;
+  }
+
+  .text-gradient {
+    background: linear-gradient(to right, #007BFF, #00A9E0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    animation: pulseColor 4s infinite;
+  }
+
+  @keyframes pulseColor {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.6;
+    }
+  }
+</style>
+<script>
+  function showTab(tabName) {
+    document.getElementById('tab-onprem').classList.add('hidden');
+    document.getElementById('tab-oncloud').classList.add('hidden');
+    document.getElementById('tab-' + tabName).classList.remove('hidden');
+
+    // เปลี่ยนปุ่ม active
+    const buttons = document.querySelectorAll('.tab-btn');
+    buttons.forEach(btn => btn.classList.remove('bg-blue-500', 'text-white'));
+    if (tabName === 'onprem') {
+      buttons[0].classList.add('bg-blue-500', 'text-white');
+      buttons[1].classList.add('bg-gray-200', 'text-gray-800');
+    } else {
+      buttons[1].classList.add('bg-blue-500', 'text-white');
+      buttons[0].classList.add('bg-gray-200', 'text-gray-800');
+    }
+  }
+</script>
 
 </html>
