@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="บริษัท IoT นำเสนอเทคโนโลยีอัจฉริยะสำหรับอนาคต" />
-  <meta name="keywords" content="IoT, Dashboard, Sensor, Cloud API, Automation" />
-  <meta name="author" content="IoT Company" />
-  <title>IoT Company</title>
+  <meta content="เราให้บริการ IoT แบบครบวงจร ติดตั้งเซ็นเซอร์, Dashboard วิเคราะห์, API เชื่อมต่อ พร้อมทีมดูแลระบบระดับมืออาชีพ" name="description"/>
+  <meta content="IoT, ระบบเซ็นเซอร์, Dashboard, แจ้งเตือน, API, Automation, อุปกรณ์อัจฉริยะ, สมาร์ทฟาร์ม, ระบบโรงงาน" name="keywords"/>
+  <meta content="IoT Company" name="author"/>
+  <title>SurfSight - ระบบเซ็นเซอร์อัจฉริยะ | แดชบอร์ด | ระบบแจ้งเตือน</title>
   <link rel="icon" href="src/logo.png" type="image/png" />
 
   <!-- Tailwind CSS CDN -->
@@ -65,6 +65,28 @@
     animation-delay: 0.3s;
   }
   </style>
+  
+  <meta content="surfsight - ระบบเซ็นเซอร์อัจฉริยะ | แดชบอร์ด | ระบบแจ้งเตือน" property="og:title"/>
+  <meta content="เราให้บริการ IoT แบบครบวงจร ติดตั้งเซ็นเซอร์, Dashboard วิเคราะห์, API เชื่อมต่อ พร้อมทีมดูแลระบบระดับมืออาชีพ" property="og:description"/>
+  <meta content="https://surfsight.co/src/logo.png" property="og:image"/>
+  <meta content="https://surfsight.co" property="og:url"/>
+  <meta content="website" property="og:type"/>
+  <script type="application/ld+json">
+      {
+     "@context": "https://surfsight.co",
+     "@type": "Organization",
+     "name": "SurfSight",
+     "url": "https://surfsight.com",
+     "logo": "https://surfsight.co/src/logo.png",
+     "contactPoint": {
+       "@type": "ContactPoint",
+       "telephone": "+66972899851",
+       "contactType": "Customer Service"
+     },
+     "sameAs": []
+     }
+     </script>
+
 </head>
 
 <body class="bg-white text-gray-800 transition-colors">
@@ -72,7 +94,7 @@
   <header class="sticky top-0 bg-white shadow z-50">
     <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
       <div class="flex items-center gap-3">
-        <img src="src/logo.png" alt="Logo" class="h-20 w-20">
+        <img src="src/logo.png" alt="surfsight" class="h-20 w-20">
       </div>
       <nav class="space-x-4 hidden md:block">
         <a href="#services" class="hover:text-orange-500">บริการ</a>
@@ -86,7 +108,7 @@
   <section class="relative text-white py-24 text-center overflow-hidden">
     <!-- รูปพื้นหลังแบบครอบเต็ม + เฟด -->
     <div class="absolute inset-0">
-      <img src="src/profile/p4.jpg" alt="IoT Background" class="w-full h-full object-cover opacity-0 animate-fade-in-bg" />
+      <img src="src/profile/p4.jpg" alt="surfsight" class="w-full h-full object-cover opacity-0 animate-fade-in-bg" />
       <!-- Overlay สีเพื่อให้ข้อความเด่น -->
       <div class="absolute inset-0 bg-gradient-to-r from-[#00A9E0]/80 to-[#007BFF]/80 mix-blend-multiply"></div>
     </div>
@@ -115,19 +137,19 @@
       ไปจนถึงการวิเคราะห์ข้อมูลผ่านแดชบอร์ด พร้อมรองรับการเชื่อมต่อกับระบบภายนอก</p>
     <div class="grid gap-8 md:grid-cols-3">
       <div class="p-6 border rounded-lg shadow bg-white">
-        <img src="src/i1.png" alt="Sensor Icon" class="h-20 w-20 mb-4 mx-auto">
+        <img src="src/i1.png" alt="Sensor IoT" class="h-20 w-20 mb-4 mx-auto">
         <h3 class="text-xl font-semibold mb-2">ระบบเซ็นเซอร์ IoT</h3>
         <p class="text-gray-600">ติดตั้งและเชื่อมต่อเซ็นเซอร์ตรวจจับข้อมูล เช่น อุณหภูมิ ความชื้น การสั่นสะเทือน
           เพื่อเก็บข้อมูลแบบเรียลไทม์</p>
       </div>
       <div class="p-6 border rounded-lg shadow bg-white">
-        <img src="src/i2.png" alt="Dashboard Icon" class="h-20 w-20 mb-4 mx-auto">
+        <img src="src/i2.png" alt="Dashboard" class="h-20 w-20 mb-4 mx-auto">
         <h3 class="text-xl font-semibold mb-2">Dashboard แสดงผล</h3>
         <p class="text-gray-600">ออกแบบแดชบอร์ดแบบอินเทอร์แอคทีฟ ดูข้อมูลแบบเรียลไทม์ วิเคราะห์แนวโน้ม
           และแจ้งเตือนเมื่อมีเหตุผิดปกติ</p>
       </div>
       <div class="p-6 border rounded-lg shadow bg-white">
-        <img src="src/i3.png" alt="API Icon" class="h-20 w-20 mb-4 mx-auto">
+        <img src="src/i3.png" alt="API" class="h-20 w-20 mb-4 mx-auto">
         <h3 class="text-xl font-semibold mb-2">เชื่อมต่อ Cloud API</h3>
         <p class="text-gray-600">ระบบสามารถเชื่อมต่อกับบริการภายนอก เช่น LINE, Telegram, Google Sheet, ERP ได้ผ่าน API
           ที่กำหนดเอง</p>
@@ -358,8 +380,8 @@
     <div class="max-w-6xl mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold mb-10">พันธมิตรของเรา</h2>
       <div class="flex justify-center gap-10 flex-wrap">
-        <img src="src/alpng.png" alt="Partner 1" class="h-16 object-contain">
-        <img src="src/BIM.png" alt="Partner 2" class="h-16 object-contain">
+        <img src="src/alpng.png" alt="allmobilerobotics" class="h-16 object-contain">
+        <img src="src/BIM.png" alt="BIM Surf" class="h-16 object-contain">
       </div>
     </div>
   </section>
@@ -369,8 +391,8 @@
     <div class="max-w-6xl mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold mb-10">ลูกค้าของเรา</h2>
       <div class="flex justify-center gap-10 flex-wrap">
-        <img src="src/logo_smart.png" alt="Customer 1" class="h-20 object-contain bg-gray-600">
-        <img src="src/PFS.png" alt="Customer 2" class="h-20 object-contain">
+        <img src="src/logo_smart.png" alt="Smart" class="h-20 object-contain bg-gray-600">
+        <img src="src/PFS.png" alt="PFS" class="h-20 object-contain">
       </div>
     </div>
   </section>
@@ -381,15 +403,15 @@
       <h2 class="text-3xl font-bold mb-10">ผลงานของเรา</h2>
       <div class="grid md:grid-cols-3 gap-6">
         <div class="bg-white p-4 rounded shadow">
-          <img src="src/profile/p5.jpg" class="mb-2" alt="project 1">
+          <img src="src/profile/p5.jpg" class="mb-2" alt="ควบคุมอัติโนมัติ">
           <p>Smart Farm ระบบควบคุมแสงและน้ำอัตโนมัติ</p>
         </div>
         <div class="bg-white p-4 rounded shadow">
-          <img src="src/profile/p2.jpg" class="mb-2" alt="project 2">
+          <img src="src/profile/p2.jpg" class="mb-2" alt="ตรวจวัดพลังงาน">
           <p>ระบบตรวจวัดพลังงานในโรงงาน</p>
         </div>
         <div class="bg-white p-4 rounded shadow">
-          <img src="src/profile/p3.jpg" class="mb-2" alt="project 3">
+          <img src="src/profile/p3.jpg" class="mb-2" alt="ควบคุมผ่านมือถือ">
           <p>บ้านอัจฉริยะพร้อมควบคุมผ่านมือถือ</p>
         </div>
       </div>
@@ -399,7 +421,7 @@
       <h2 class="text-3xl font-bold text-center mb-8">ติดต่อเรา</h2>
       <div class="mb-6 text-center">
         <p>116/8 Moo5 BANG PHAI Sub-district, MUEANG NONTHABURI District, NONTHABURI Province 11000</p>
-        <p>โทร: 097-2899851 | อีเมล: contact@surfsight.co</p>
+        <p>โทร: 097-2899851 (Toon) 090-1271175 (M)| อีเมล: admin@surfsight.co</p>
       </div>
     </section>
 
