@@ -9,7 +9,7 @@
   <meta content="IoT Company" name="author"/>
   <title>SurfSight - ระบบ IoT สำหรับธุรกิจ | Dashboard | เซ็นเซอร์ | แจ้งเตือน</title>
   <link rel="icon" href="src/logo.png" type="image/png" />
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -127,6 +127,26 @@
         ดูบริการของเรา
       </a>
     </div>
+        <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-10 text-[#007BFF]">ภาพรวมระบบ IoT ของเรา</h2>
+
+            <div class="swiper w-full max-w-3xl mx-auto rounded-lg overflow-hidden shadow-lg">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="src/s4.png" class="w-full h-auto" alt="ระบบ IoT 1" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="src/s1.png" class="w-full h-auto" alt="ระบบ IoT 2" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="src/s2.png" class="w-full h-auto" alt="ระบบ IoT 3" />
+                    </div>
+                </div>
+                <div class="swiper-pagination mt-4"></div>
+            </div>
+        </div>
+    </section>
   </section>
 
 
@@ -431,7 +451,19 @@
     <footer class="bg-gray-200 text-center py-4">
       <p>&copy; 2025 SurfSight Company. สงวนลิขสิทธิ์</p>
     </footer>
-
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper('.swiper', {
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                effect: 'fade',
+            });
+        </script>
 </body>
 <style>
   @keyframes fade-in-up {
